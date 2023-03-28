@@ -1,0 +1,155 @@
+.Booking {
+    text-align: center;
+    background-color: rgb(33, 33, 33);
+    
+  }
+  
+  .HeaderWrapper{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background-color: black;
+    color: aliceblue;
+    max-height: 7vh;
+  }
+  .HeaderWrapper nav{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
+  
+  
+  .BookingComponentWrapper{
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: rgb(33, 33, 33);
+
+  }
+  
+  .BookingComponent{
+    background-color: rgb(48, 48, 48);
+    border: 0;
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: white;
+    max-width: 850px;
+    gap: 20px;
+    
+  }
+  .BookingComponent .Image{
+    align-self: center;
+    background-color: #5d5d5d;
+    border: 0;
+    border-radius: 20px;
+  }
+  .BookingComponent p{
+    text-align: start;
+  }
+
+  .BookingComponent button{
+    background-color: black;
+    padding: 10px;
+    color: white;
+    border: 0;
+    border-radius: 20px;
+    font-size: 1rem;
+  }
+  
+  .Footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    color: white;
+    background-color: black;
+    margin-top: 50px;
+    padding: 20px;
+  }
+  .col1{
+    text-align: start;
+  }
+  .col2{
+    display: flex;
+    flex-direction: column;
+  }
+  .col2 nav {
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+  }
+
+  .PersDataComponentWrapper{
+    display: flex;
+    justify-content: center;
+  }
+
+
+  .PersDataComponent{
+    display: flex;
+    flex-direction: row;
+    gap:50px;
+    background-color:rgb(48, 48, 48);
+    padding: 30px;
+    border: 0;
+    border-radius: 30px;
+  }
+  .Image{
+    background-color: #5d5d5d;
+    border-radius: 20px;
+  }
+  .PersDataComponent div{
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    gap:30px
+  }
+  .FinalCostWrapper{
+    display: flex;
+    justify-content: center;
+  }
+
+  .FinalCost{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: rgb(48, 48, 48);
+    padding: 30px;
+    border: 0;
+    border-radius: 20px;
+    max-width: 500px;
+    align-self: center;
+  }
+  .PaymentMethod{
+    display: flex;
+    gap: 40px;
+  }
+  .PaymentMethod select{
+    background-color: black;
+    padding: 10px;
+    color: white;
+    border: 0;
+    border-radius: 20px;
+    font-size: 1rem;
+  }
+  .PaymentMethod option{
+    background-color: black;
+    padding: 10px;
+    color: white;
+    border: 0;
+    border-radius: 20px;
+    font-size: 1rem;
+  }
+  .PaymentMethod button{
+    background-color: black;
+    padding: 10px;
+    color: white;
+    border: 0;
+    border-radius: 20px;
+    font-size: 1rem;
+  }

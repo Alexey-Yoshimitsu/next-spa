@@ -1,9 +1,187 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
-import styles from '@/styles/Home.module.css'
+import Head from "next/head";
+import Image from "next/image";
+import styles from "@/styles/Home.module.css";
+import Link from "next/link";
+import Router from "next/router";
+import logo from "../public/favicon.ico";
+import { useState } from "react";
 
-const inter = Inter({ subsets: ['latin'] })
+const Header = () => {
+  return (
+    <div className={styles.HeaderWrapper}>
+      <Link href="/">
+        <Image src={logo} width={40} height={40} />
+      </Link>
+      <nav>
+        <Link href="/Stocks">Акции</Link>
+        <Link href="/Booking">Бронирование</Link>
+        <Link href="/Perscab">Личный кабинет</Link>
+      </nav>
+    </div>
+  );
+};
+
+const Novost = (props) => {
+  return (
+    <div className={styles.Novost}>
+      <Image width={800} height={600} />
+      <h3>{props.title}</h3>
+      <p>{props.decription}</p>
+      <button>Подробнее</button>
+    </div>
+  );
+};
+
+const Novosti = () => {
+  return (
+    <div className={styles.Novosti}>
+      <Novost
+        title="Весна, Новые Тарифы"
+        decription="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vitae suscipit tellus mauris a diam maecenas sed enim. Fermentum iaculis eu non diam phasellus vestibulum lorem sed. At risus viverra adipiscing at in tellus integer feugiat scelerisque. "
+      ></Novost>
+      <Novost
+        title="Весна, Новые Тарифы"
+        decription="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vitae suscipit tellus mauris a diam maecenas sed enim. Fermentum iaculis eu non diam phasellus vestibulum lorem sed. At risus viverra adipiscing at in tellus integer feugiat scelerisque. "
+      ></Novost>
+      <Novost
+        title="Весна, Новые Тарифы"
+        decription="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vitae suscipit tellus mauris a diam maecenas sed enim. Fermentum iaculis eu non diam phasellus vestibulum lorem sed. At risus viverra adipiscing at in tellus integer feugiat scelerisque. "
+      ></Novost>
+      <Novost
+        title="Весна, Новые Тарифы"
+        decription="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vitae suscipit tellus mauris a diam maecenas sed enim. Fermentum iaculis eu non diam phasellus vestibulum lorem sed. At risus viverra adipiscing at in tellus integer feugiat scelerisque. "
+      ></Novost>
+      <Novost
+        title="Весна, Новые Тарифы"
+        decription="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vitae suscipit tellus mauris a diam maecenas sed enim. Fermentum iaculis eu non diam phasellus vestibulum lorem sed. At risus viverra adipiscing at in tellus integer feugiat scelerisque. "
+      ></Novost>
+    </div>
+  );
+};
+
+const Footer = () => {
+  return (
+    <div className={styles.Footer}>
+      <div className={styles.col1}>
+        <p>г. Москва ул. Академика Миллионщикова</p>
+        <a type="tel">+7(800)553535</a>
+        <p>Индекс Драйв</p>
+        <p></p>
+      </div>
+      <div className={styles.col2}>
+        <Link href="/">
+          <Image src={logo} width={40} height={40} />
+        </Link>
+        <nav>
+          <Link href="/Stocks">Акции</Link>
+          <Link href="/Booking">Бронирование</Link>
+          <Link href="/Perscab">Личный кабинет</Link>
+        </nav>
+      </div>
+    </div>
+  );
+};
+
+
+//let titleStates = ["Довериек нам", "Нам доверяют множество клиентов","Приведи друга и получи 5000 бонусов"]
+// let [titleState, SetTitleState]  = useState("Довериек нам")
+// const Slidest  = ()=>{
+//     setTimeout(()=>{for(i in titleStates){
+//       SetTitleState = i
+//       console.log("slide")
+//     }}, 3000)
+//
+// }
+
+const Doverie = () => {
+  const Slide = (props) => {
+  return (
+    <div className={styles.Slide}>
+      <Image className={styles.Image} width={800} height={600} />
+      <h2>{props.title}</h2>
+    </div>
+  );
+};
+  //Slidest()
+  let titleStates = [
+    "Доверие к нам",
+    "Нам доверяют множество клиентов",
+    "Приведи друга и получи 5000 бонусов",
+  ];
+  return (
+    <div className={styles.DoverieWrapper}>
+      <div className={styles.Doverieslivder}>
+          <Slide title={titleStates[2]}></Slide>
+      </div>
+    </div>
+  );
+};
+
+const Auto = (props) => {
+  return (
+    <div className={styles.Auto}>
+      <Image width={250} height={200} />
+      <h3>{props.title}</h3>
+      <span>Класс: {props.classAuto}</span>
+      <p>{props.decription}</p>
+      <button>Подробнее</button>
+    </div>
+  );
+};
+
+const Categories = () => {
+  return (
+    <div className={styles.CategoriesWrapper}>
+      <div className={styles.List}>
+        <Auto
+          title="Toyota Camry"
+          classAuto="B"
+          decription="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+        ></Auto>
+        <Auto
+          title="Toyota Avensis"
+          classAuto="C"
+          decription="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+        ></Auto>
+        <Auto
+          title="Toyota Corolla"
+          classAuto="D"
+          decription="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+        ></Auto>
+        <Auto
+          title="Toyota Alphard"
+          classAuto="V"
+          decription="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+        ></Auto>
+        <Auto
+          title="Hyndai Solaris"
+          classAuto="D"
+          decription="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+        ></Auto>
+        <Auto
+          title="Hyndai Creta"
+          classAuto="D"
+          decription="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+        ></Auto>
+        <Auto
+          title="Hyndai Sonata"
+          classAuto="B"
+          decription="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+        ></Auto>
+        <Auto
+          title="Kia Rio"
+          classAuto="B"
+          decription="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+        ></Auto>
+        <Auto
+          title="Kia Optima"
+          classAuto="B"
+          decription="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+        ></Auto>
+      </div>
+    </div>
+  );
+};
 
 export default function Home() {
   return (
@@ -14,110 +192,13 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={styles.main}>
-        <div className={styles.description}>
-          <p>
-            Get started by editing&nbsp;
-            <code className={styles.code}>pages/index.js</code>
-          </p>
-          <div>
-            <a
-              href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              By{' '}
-              <Image
-                src="/vercel.svg"
-                alt="Vercel Logo"
-                className={styles.vercelLogo}
-                width={100}
-                height={24}
-                priority
-              />
-            </a>
-          </div>
-        </div>
-
-        <div className={styles.center}>
-          <Image
-            className={styles.logo}
-            src="/next.svg"
-            alt="Next.js Logo"
-            width={180}
-            height={37}
-            priority
-          />
-          <div className={styles.thirteen}>
-            <Image
-              src="/thirteen.svg"
-              alt="13"
-              width={40}
-              height={31}
-              priority
-            />
-          </div>
-        </div>
-
-        <div className={styles.grid}>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2 className={inter.className}>
-              Docs <span>-&gt;</span>
-            </h2>
-            <p className={inter.className}>
-              Find in-depth information about Next.js features and&nbsp;API.
-            </p>
-          </a>
-
-          <a
-            href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2 className={inter.className}>
-              Learn <span>-&gt;</span>
-            </h2>
-            <p className={inter.className}>
-              Learn about Next.js in an interactive course with&nbsp;quizzes!
-            </p>
-          </a>
-
-          <a
-            href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2 className={inter.className}>
-              Templates <span>-&gt;</span>
-            </h2>
-            <p className={inter.className}>
-              Discover and deploy boilerplate example Next.js&nbsp;projects.
-            </p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2 className={inter.className}>
-              Deploy <span>-&gt;</span>
-            </h2>
-            <p className={inter.className}>
-              Instantly deploy your Next.js site to a shareable URL
-              with&nbsp;Vercel.
-            </p>
-          </a>
-        </div>
+      <main className={styles.App}>
+        <Header></Header>
+        <Doverie></Doverie>
+        <Categories></Categories>
+        <Novosti></Novosti>
+        <Footer></Footer>
       </main>
     </>
-  )
+  );
 }

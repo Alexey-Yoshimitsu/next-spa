@@ -1,0 +1,76 @@
+.Stocks {
+    text-align: center;
+    background-color: rgb(33, 33, 33);
+  }
+  
+  .HeaderWrapper{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background-color: black;
+    color: aliceblue;
+    max-height: 7vh;
+  }
+  .HeaderWrapper nav{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
+  
+  
+  
+  
+  .Stock{
+    background-color: rgb(48, 48, 48);
+    border: 0;
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: white;
+    max-width: 850px;
+    gap: 20px;
+    
+  }
+  .Stock img{
+    align-self: center;
+    background-color: #5d5d5d;
+    border: 0;
+    border-radius: 20px;
+  }
+  .Stock p{
+    text-align: start;
+  }
+
+  .StocksList{
+    display: flex;
+    gap: 50px;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  
+  .Footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    color: white;
+    background-color: black;
+    margin-top: 50px;
+    padding: 20px;
+  }
+  .col1{
+    text-align: start;
+  }
+  .col2{
+    display: flex;
+    flex-direction: column;
+  }
+  .col2 nav {
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+  }
